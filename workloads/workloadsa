@@ -1,0 +1,50 @@
+
+couchbase.host=127.0.0.1
+couchbase.password=qwerty
+couchbase.bucket=Administrator
+threads_load= 4
+threads_run= 4
+totalrecordcount=1000
+mongodb.url=mongodb://localhost:27017/ycsb?w=1
+order_count= 200
+customer_count= 1000
+recordcount=1000
+operationcount=1000
+requestdistribution=uniform
+readallfields=true
+readproportion=0
+updateproportion=0
+scanproportion=0
+insertproportion=0
+
+
+workload=com.yahoo.ycsb.workloads.soe.SoeWorkload
+
+
+# Workload settings for soe
+
+soe_insert=0
+soe_update=0.5
+soe_read=0.5
+soe_scan=0
+soe_page=0
+soe_search=0
+soe_nestscan=0
+soe_arrayscan=0
+soe_arraydeepscan=0
+soe_report=0
+soe_report2=0
+soe_page2=0
+soe_search2=0
+
+# zipfian, uniform
+soe_request_distribution=zipfian
+
+soe_storage_host=localhost
+soe_storage_port=11211
+
+soe_querylimit_min = 10
+soe_querylimit_max = 10
+
+soe_offset_min=0
+soe_offset_max=0

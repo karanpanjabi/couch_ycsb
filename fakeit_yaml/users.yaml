@@ -1,0 +1,39 @@
+name: Users
+type: object
+key:
+  data:
+    build: `user_${this.user_id}`
+data:
+  count: 2
+  pre_run: |
+    globals.user_counter = 0;
+properties:
+  user_id:
+    description: The users id
+    data:
+      build: faker.random.uuid()
+  name:
+    description: The users first name
+    data:
+      fake: '{{name.firstName}}'
+  last_name:
+    description: The users last name
+    data:
+      fake: '{{name.lastName}}'
+  username:
+    description: The users username
+    data:
+      fake: '{{internet.userName}}'
+  password:
+    description: The users password
+    data:
+      fake: '{{internet.password}}'
+  email:
+    description: The users email address
+    data:
+      fake: '{{internet.email}}'
+  phone:
+    description: The users mobile phone
+    data:
+      fake: '{{phone.phoneNumber}}'
+      post_build: this.phone.replace(/x[0-9]+$/, '')

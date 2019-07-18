@@ -1,0 +1,287 @@
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl com.yahoo.ycsb:core -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+java -cp /mnt/d/ccbd/YCSBjson/core/conf:/mnt/d/ccbd/YCSBjson/core/target/core-0.13.0-SNAPSHOT.jar:/home/karan/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/home/karan/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/home/karan/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/home/karan/.m2/repository/org/json/json/20160212/json-20160212.jar:/home/karan/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/home/karan/.m2/repository/net/spy/spymemcached/2.11.7/spymemcached-2.11.7.jar com.yahoo.ycsb.Client -db com.yahoo.ycsb.BasicDB -p couchbase.bucket=Administrator -p couchbase.password=qwerty -P workloads/soe/workloadsa -p soe_storage_port=11211 -p totalrecordcount=20 -t
+Command line: -db com.yahoo.ycsb.BasicDB -p couchbase.bucket=Administrator -p couchbase.password=qwerty -P workloads/soe/workloadsa -p soe_storage_port=11211 -p totalrecordcount=20 -tYCSB Client 0.13.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+***************** properties *****************
+"soe_storage_port"="11211"
+"soe_page2"="0"
+"soe_nestscan"="0"
+"updateproportion"="0"
+"soe_storage_host"="localhost"
+"scanproportion"="0"
+"couchbase.bucket"="Administrator"
+"couchbase.password"="qwerty"
+"soe_search2"="0"
+"soe_insert"="0"
+"soe_request_distribution"="zipfian"
+"operationcount"="20"
+"totalrecordcount"="20"
+"soe_offset_min"="10"
+"soe_offset_max"="10"
+"soe_page"="0"
+"readallfields"="true"
+"requestdistribution"="uniform"
+"soe_report2"="0"
+"soe_arrayscan"="0"
+"dotransactions"="true"
+"insertproportion"="0"
+"soe_querylimit_min"="10"
+"workload"="com.yahoo.ycsb.workloads.soe.SoeWorkload"
+"soe_update"="0.5"
+"soe_querylimit_max"="10"
+"soe_search"="0"
+"readproportion"="0"
+"soe_scan"="0"
+"recordcount"="20"
+"db"="com.yahoo.ycsb.BasicDB"
+"soe_arraydeepscan"="0"
+"soe_read"="0.5"
+"soe_report"="0"
+**********************************************
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2019-06-08 07:00:16.770 INFO net.spy.memcached.MemcachedConnection:  Added {QA sa=localhost/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0} to connect queue
+soeUpdate not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeUpdate not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeRead not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeUpdate not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeUpdate not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeRead not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeUpdate not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeRead not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeUpdate not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeUpdate not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeRead not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeRead not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeUpdate not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeUpdate(DBWrapper.java:314)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeUpdate(SoeWorkload.java:200)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:141)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeRead not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+soeRead not implemented
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.DBWrapper.measure(DBWrapper.java:199)
+	at com.yahoo.ycsb.DBWrapper.soeRead(DBWrapper.java:326)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransactionSoeRead(SoeWorkload.java:210)
+	at com.yahoo.ycsb.workloads.soe.SoeWorkload.doTransaction(SoeWorkload.java:144)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:446)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Traceback (most recent call last):
+  File "bin/ycsb", line 303, in <module>
+    sys.exit(main())
+  File "bin/ycsb", line 294, in main
+    return subprocess.call(ycsb_command)
+  File "/usr/lib/python2.7/subprocess.py", line 172, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib/python2.7/subprocess.py", line 1099, in wait
+    pid, sts = _eintr_retry_call(os.waitpid, self.pid, 0)
+  File "/usr/lib/python2.7/subprocess.py", line 125, in _eintr_retry_call
+    return func(*args)
+KeyboardInterrupt

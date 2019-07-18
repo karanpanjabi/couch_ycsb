@@ -1,0 +1,14 @@
+{
+  "name": "couchbase_init",
+  "version": "1.0.0",
+  "description": "Initializes couchbase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "couchbase": "^2.6.5"
+  }
+}
