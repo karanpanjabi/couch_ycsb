@@ -1,0 +1,33 @@
+
+name: AdvJSON
+type: object
+key: _id
+data:
+  count: 1
+properties:
+  _id:
+    type: string
+    data:
+      post_build: "return 'order:::' + document_index + '';"
+  day:
+    type: string
+    description: "Day of order"
+    data:
+      build: "return Math.floor((Math.random() * 31) + 1);"
+  month:
+    type: string
+    description: "Month of order"
+    data:
+      fake: "{{date.month}}"
+  sale_price:
+    type: integer
+    description: "Sales Amount"
+    data:
+      build: "return faker.finance.amount(1000,10000,1);"
+
+
+
+
+
+
+

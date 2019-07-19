@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "couchbase": "^2.6.5"
+    "couchbase": "^2.6.5",
+    "fakeit": "^1.4.0"
   }
 }

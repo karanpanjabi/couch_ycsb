@@ -21,14 +21,14 @@ def read_props(filepath):
 def yaml_input(cus_inp,ord_inp):
 ### CUSTOMERS :
     cnt=cus_inp
-    fp=open("fakeit_yaml/customers.yaml","r+")
+    fp=open("couchbase_init/customers.yaml","r+")
     contents=fp.read()
     fp.seek(0)
     fp.truncate()
     
     contents=contents.split('\n')
     contents[5]='  count: {}'.format(cnt)
-    contents[153]='        build: "return \'order:::\'+Math.floor((Math.random() * {}) + 1);"'.format(ord_inp-1)
+    # contents[153]='        build: "return \'order:::\'+Math.floor((Math.random() * {}) + 1);"'.format(ord_inp-1)
     fp.seek(0)
     contents="\n".join(contents)
     fp.write(contents)
@@ -37,17 +37,7 @@ def yaml_input(cus_inp,ord_inp):
 
 
 ### ORDERS:
-    cnt=ord_inp
-    fp=open("fakeit_yaml/orders.yaml","r+")
-    contents=fp.read()
-    fp.seek(0)
-    fp.truncate()
-    contents=contents.split('\n')
-    contents[5]='  count: {}'.format(cnt)
-    fp.seek(0)
-    contents="\n".join(contents)
-    fp.write(contents)
-    fp.close()          
+    # cnt=o1   
 
 def syscall(cmd):
     print("Executing: "+cmd)
@@ -87,8 +77,8 @@ if __name__ == "__main__":
 
     print("\n\n--------------------Fakeit: Loading data to DB---------------------------")
     syscall("node couchbase_init/")
-    syscall("fakeit couchbase -s %s -u %s -b %s -p %s fakeit_yaml/customers.yaml" % (couchhost, couchbucket, couchbucket, couchpassword))
-    syscall("fakeit couchbase -s %s -u %s -b %s -p %s fakeit_yaml/orders.yaml" % (couchhost, couchbucket, couchbucket, couchpassword))
+    # syscall("fakeit couchbase -s %s -u %s -b %s -p %s fakeit_yaml/customers.yaml" % (couchhost, couchbucket, couchbucket, couchpassword))
+    # syscall("fakeit couchbase -s %s -u %s -b %s -p %s fakeit_yaml/orders.yaml" % (couchhost, couchbucket, couchbucket, couchpassword))
     print("\n\n--------------------YCSB: Load phase---------------------------")
     syscall("cd YCSBjson ; bin/ycsb load couchbase2 -s -P %s -threads %d" % (workloadpath, threads_load))
     print("\n\n--------------------YCSB: Run phase---------------------------")
